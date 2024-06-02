@@ -1,25 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gemini/flutter_gemini.dart';
 import 'package:myapp/home_page.dart';
 
 void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatefulWidget {
-  const MyApp({super.key});
-
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  var no = 1;
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
+  Gemini.init(apiKey: "AIzaSyCR9g8GokNugkH-ZssEQRc8LPLeTpNYW4M");
+  runApp(MaterialApp(
       home: HomePage(),
       debugShowCheckedModeBanner: false,
-    );
-  }
+    )
+  );
 }
